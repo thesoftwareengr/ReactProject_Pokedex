@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import Pokedex from './Pokedex';
-import './index.css';
-
+import React, { useState, useEffect } from "react";
+import Pokedex from "./Pokedex";
+import "./index.css";
 
 const calculateTotalExp = (pokemons) => {
-  return pokemons.reduce((totalExp, pokemon) => totalExp + pokemon.base_experience, 0);
+  return pokemons.reduce(
+    (totalExp, pokemon) => totalExp + pokemon.base_experience,
+    0
+  );
 };
 
 function PokemonBattle({ player1Pokemons, player2Pokemons }) {
@@ -16,11 +18,11 @@ function PokemonBattle({ player1Pokemons, player2Pokemons }) {
       const player2Exp = calculateTotalExp(player2Pokemons);
 
       if (player1Exp > player2Exp) {
-        setWinner('Player 1');
+        setWinner("Player 1");
       } else if (player2Exp > player1Exp) {
-        setWinner('Player 2');
+        setWinner("Player 2");
       } else {
-        setWinner('It\'s a tie!');
+        setWinner("It's a tie!");
       }
     };
 
@@ -28,23 +30,32 @@ function PokemonBattle({ player1Pokemons, player2Pokemons }) {
   }, [player1Pokemons, player2Pokemons]);
 
   return (
-    <div>
-      <h1 className='title'>Pokemon Battle</h1>
-
-      <div className='player_1'>
-        <h2>Team Prince Pokemons</h2>
-        <Pokedex pokemonData={player1Pokemons} />
-        <p>Total Experience: {calculateTotalExp(player1Pokemons)}</p>
-      </div>
-
-      <div className='player_2'>
-        <h3>Team Ayan Pokemons</h3>
-        <Pokedex pokemonData={player2Pokemons} />
-        <p>Total Experience: {calculateTotalExp(player2Pokemons)}</p>
-      </div>
-
-      {winner && <h2>The winner is: {winner}</h2>}
-    </div>
+    <>
+      <h1 className="title">Pokemon Battle</h1>
+        <div className="row">
+          <div className=" col-md-5 text-center ">
+         
+            <h2>Team Prince Pokemons</h2>
+            <p>Total Experience: {calculateTotalExp(player1Pokemons)}</p>
+            <div className="player">
+            <Pokedex pokemonData={player1Pokemons} />
+            </div>
+          </div>
+          <div className="col-md-2 text-center">
+          <h2>The winner is: {winner}</h2>
+          
+          <h1 className="versus">VS</h1>
+          </div> 
+          <div className="col-md-5 text-center">
+            <h3>Team Ayan Pokemons</h3>
+            <p>Total Experience: {calculateTotalExp(player2Pokemons)}</p>
+            <div className="player">
+              <Pokedex pokemonData={player2Pokemons} />
+              </div>
+          </div>
+        </div>
+      {/* <div className="row winner">{winner && <h2>The winner is: {winner}</h2>}</div> */}
+    </>
   );
 }
 

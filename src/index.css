@@ -1,69 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-body{
-  margin: 0; 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
   padding: 0;
-  /* background-color: #FFDBC3;  
-  
-  /* background-image: url('RockForest.webp');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: fixed; */
-
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.PokecardList {
+.container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
 }
 
-.title{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.title {
+  text-align: center;
 }
-
 
 .Pokecard {
-  background-color: #FFDBC3;
+  background-color: #ffdbc3;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 10px;
+  padding: 6px;
   text-align: center;
   margin: 10px;
-  width: 200px;
+  width: 170px;
 }
 
 .Pokecard img {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
 }
 
 .Pokecard h3 {
   font-size: 1.5em;
-  margin-bottom: 8px;
-}
-
-.Pokecard p {
-  margin: 8px 0;
 }
 
 .Pokecard p:first-of-type {
-  margin-top: 18px;
   font-weight: bold;
 }
 
-.player_1 {
-
+.card-containers {
+  display: flex;
 }
 
-.player_2{
+.player {
+  margin-left: 60px;
+}
 
+.player2 {
+  width: 50%;
+}
+.versus{
+  margin-top: 150%;
+}
+
+.winner {
 }

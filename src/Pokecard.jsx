@@ -8,7 +8,7 @@ function Pokecard({ id, name, type, base_experience }) {
   const paddedId = padWithZeros(id);
 
   return (
-    <div className="Pokecard">
+    <div className="col-5 Pokecard">
       <h3>{name}</h3>
       <img src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${paddedId}.png`} alt={name} />
       <p>Type: {type}</p>

@@ -1,7 +1,7 @@
 import React from "react";
 import PokemonBattle from "./PokemonBattle";
 import Pokedex from "./Pokedex";
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import 'index.css'
 
