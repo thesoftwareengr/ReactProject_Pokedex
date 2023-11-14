@@ -14,7 +14,7 @@ const calculateTotalExp = (pokemons) => {
 
 
 
-function PokemonBattle({ player1Pokemons, player2Pokemons }) {
+function PokemonBattle({ player1Pokemons, player2Pokemons,onUpdateData }) {
   const [winner, setWinner] = useState(null);
   const[battle, setBattle] = useState(true);
   
@@ -22,6 +22,8 @@ function PokemonBattle({ player1Pokemons, player2Pokemons }) {
   
   const handleClick = () => {
     setBattle(!battle);
+
+    onUpdateData(battle);
     
   };
   useEffect(() => {
@@ -59,10 +61,7 @@ function PokemonBattle({ player1Pokemons, player2Pokemons }) {
           <div className="col-md-2 text-center">
           <h2>The winner is: {winner}</h2>
           
-          <div className="versus">
-
-          </div>
-          <button onClick={handleClick}>
+          <button className="fight" onClick={handleClick}>
       Fight!
     </button>
           </div> 

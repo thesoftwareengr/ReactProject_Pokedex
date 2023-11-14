@@ -1,52 +1,44 @@
-import React from "react";
-import PokemonBattle from "./PokemonBattle";
-import Pokedex from "./Pokedex";
+import React, { useState } from 'react';
+import PokemonBattle from './PokemonBattle';
+import Pokedex from './Pokedex';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-// import 'index.css'
-
-// function getRandomPokemons() {
-//   // const shuffledPokemons = Pokedex.defaultProps.pokemonData.sort(() => 0.5 - Math.random());
-//   // return shuffledPokemons.slice(0, 4);
-
-//   const shuffledPokemons = Pokedex.defaultProps.pokemonData.Math.
-// }
 
 function shuffle(array) {
   let currentIndex = array.length,
     randomIndex;
 
   while (currentIndex > 0) {
-    // Pick a remaining element.
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
 
-    // And swap it with the current element.
     [array[currentIndex], array[randomIndex]] = [
       array[randomIndex],
       array[currentIndex],
     ];
   }
-  console.log(array);
+
   return array;
 }
 
 function App() {
+  const [data, setData] = useState('initialData');
+
+  const handleUpdate = (newData) => {
+    setData(newData);
+  };
+
   const shuffledPokedex = shuffle(Pokedex.defaultProps.pokemonData);
-  console.log(shuffledPokedex);
-  const player1Pokemons = shuffledPokedex.slice(0,4);
-console.log(shuffledPokedex);
-console.log(player1Pokemons);
-  
-  const player2Pokemons = shuffledPokedex.slice(4,8);
- console.log(player2Pokemons);
+  const player1Pokemons = shuffledPokedex.slice(0, 4);
+  const player2Pokemons = shuffledPokedex.slice(4, 8);
 
   return (
     <div>
       <PokemonBattle
-       player1Pokemons={player1Pokemons}
-       player2Pokemons={player2Pokemons}
+        player1Pokemons={player1Pokemons}
+        player2Pokemons={player2Pokemons}
+        onUpdateData={handleUpdate} // Pass the callback function to the child
       />
+      <div>Data in Parent: {data}</div>
     </div>
   );
 }
