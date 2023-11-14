@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #FCEEC8;
+}
+
+
+.PokecardList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Adjust the width as needed */
+.Pokecard {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  margin: 16px;
+  width: 200px;
+}
+
+.Pokecard img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.Pokecard h3 {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+}
+
+.Pokecard p {
+  margin: 8px 0;
+}
+
+.Pokecard p:first-of-type {
+  margin-top: 16px;
+  font-weight: bold;
+}
