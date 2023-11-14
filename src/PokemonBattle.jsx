@@ -2,16 +2,28 @@ import React, { useState, useEffect } from "react";
 import Pokedex from "./Pokedex";
 import "./index.css";
 
+
 const calculateTotalExp = (pokemons) => {
+  
   return pokemons.reduce(
     (totalExp, pokemon) => totalExp + pokemon.base_experience,
     0
   );
 };
 
+
+
+
 function PokemonBattle({ player1Pokemons, player2Pokemons }) {
   const [winner, setWinner] = useState(null);
-
+  const[battle, setBattle] = useState(true);
+  
+  
+  
+  const handleClick = () => {
+    setBattle(!battle);
+    
+  };
   useEffect(() => {
     const determineWinner = () => {
       const player1Exp = calculateTotalExp(player1Pokemons);
@@ -24,10 +36,13 @@ function PokemonBattle({ player1Pokemons, player2Pokemons }) {
       } else {
         setWinner("It's a tie!");
       }
+
     };
 
     determineWinner();
-  }, [player1Pokemons, player2Pokemons]);
+    console.log(battle);
+  }, [player1Pokemons, player2Pokemons,battle]);
+
 
   return (
     <>
@@ -44,7 +59,12 @@ function PokemonBattle({ player1Pokemons, player2Pokemons }) {
           <div className="col-md-2 text-center">
           <h2>The winner is: {winner}</h2>
           
-          <h1 className="versus">VS</h1>
+          <div className="versus">
+
+          </div>
+          <button onClick={handleClick}>
+      Fight!
+    </button>
           </div> 
           <div className="col-md-5 text-center">
             <h3>Team Ayan Pokemons</h3>

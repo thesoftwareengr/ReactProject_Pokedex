@@ -3,10 +3,16 @@
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
+
+
 }
 body {
   margin: 0;
   padding: 0;
+  background-image: url('anime-nature-concept-art-background-image_492154-725.avif');
+  background-repeat: no-repeat;
+  background-size: cover; /* or background-size: 100% 100%; */
+  
 }
 
 .container {
@@ -27,16 +33,16 @@ body {
   width: 170px;
 }
 
-.Pokecard img {
-  width: 100%;
+.pokeCard img {
+  width: 40%;
   height: auto;
 }
 
-.Pokecard h3 {
+.pokeCard h3 {
   font-size: 1.5em;
 }
 
-.Pokecard p:first-of-type {
+.pokeCard p:first-of-type {
   font-weight: bold;
 }
 
@@ -53,6 +59,7 @@ body {
 }
 .versus{
   margin-top: 150%;
+  background-image: url(versus.png);
 }
 
 .winner {

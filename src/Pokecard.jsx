@@ -9,10 +9,12 @@ function Pokecard({ id, name, type, base_experience }) {
 
   return (
     <div className="col-5 Pokecard">
+    <div className="pokeCard">
       <h3>{name}</h3>
       <img src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${paddedId}.png`} alt={name} />
       <p>Type: {type}</p>
       <p>Base Experience: {base_experience}</p>
+    </div>
     </div>
   );
 }
