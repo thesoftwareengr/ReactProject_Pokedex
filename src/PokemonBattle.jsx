@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Pokedex from './Pokedex';
 import './index.css';
 
-// Utility function to calculate total experience
+
 const calculateTotalExp = (pokemons) => {
   return pokemons.reduce((totalExp, pokemon) => totalExp + pokemon.base_experience, 0);
 };
@@ -29,16 +29,16 @@ function PokemonBattle({ player1Pokemons, player2Pokemons }) {
 
   return (
     <div>
-      <h2>Pokemon Battle</h2>
+      <h1 className='title'>Pokemon Battle</h1>
 
       <div className='player_1'>
-        <h3>Player 1 Pokemons</h3>
+        <h2>Team Prince Pokemons</h2>
         <Pokedex pokemonData={player1Pokemons} />
         <p>Total Experience: {calculateTotalExp(player1Pokemons)}</p>
       </div>
 
       <div className='player_2'>
-        <h3>Player 2 Pokemons</h3>
+        <h3>Team Ayan Pokemons</h3>
         <Pokedex pokemonData={player2Pokemons} />
         <p>Total Experience: {calculateTotalExp(player2Pokemons)}</p>
       </div>
