@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:900i");
-  @import url('https://fonts.googleapis.com/css2?family=Besley:ital@1&display=swap');
-</style>
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital@1&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -12,7 +12,7 @@ body {
   padding: 0;
   background-image: url("./peakpx.jpg");
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
 }
 
 .container {
@@ -20,25 +20,20 @@ body {
 }
 
 .title {
- 
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px; 
+  height: 100px;
   border: 1px solid hsl(0, 0%, 80%);
   margin-bottom: 50px;
-
-
-  
 }
 
-.title img{
-  width: 400px; 
-  height: 150px; 
+.title img {
+  width: 400px;
+  height: 150px;
   display: block;
-  margin: auto; 
+  margin: auto;
 }
-
 
 .player-pokemon {
   width: 420px;
@@ -62,8 +57,7 @@ body {
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
 
-.winner{
-
+.winner {
   color: #3c6e5d;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 40px;
@@ -72,13 +66,12 @@ body {
   margin: 0 0 1px;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
-
 }
 
-.team-winner{
+.team-winner {
   font-family: "Besley";
   box-sizing: border-box;
-  color:rgb(170, 199, 23);
+  color: rgb(170, 199, 23);
   width: 100%;
   height: 100%;
   display: flex;
@@ -86,7 +79,6 @@ body {
   justify-content: center;
   background-color: var(--bg-color);
 }
-
 
 .experience {
   color: #518d77;
@@ -115,7 +107,7 @@ body {
 }
 
 .pokeCard h3 {
-  font-family: ' Arial Narrow, Arial, sans-serif';
+  font-family: " Arial Narrow, Arial, sans-serif";
   font-size: 1.5em;
 }
 

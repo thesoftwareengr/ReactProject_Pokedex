@@ -3,17 +3,17 @@ import Pokecard from "./Pokecard";
 
 function Pokedex({ pokemonData }) {
   return (
-      <div className="row">
-        {pokemonData.map((pokemon) => (
-          <Pokecard
-            key={pokemon.id}
-            id={pokemon.id}
-            name={pokemon.name}
-            type={pokemon.type}
-            base_experience={pokemon.base_experience}
-          />
-        ))}
-      </div>
+    <div className="row">
+      {pokemonData.map((pokemon) => (
+        <Pokecard
+          key={pokemon.id}
+          id={pokemon.id}
+          name={pokemon.name}
+          type={pokemon.type}
+          base_experience={pokemon.base_experience}
+        />
+      ))}
+    </div>
   );
 }
 
